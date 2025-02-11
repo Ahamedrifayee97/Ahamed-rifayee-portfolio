@@ -8,10 +8,39 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    
     <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#credentials">Credentials</a></li>
+                <li><a href="#info">Info</a></li>
+                <li><a href="#social-media">Social Media</a></li>
+            </ul>
+              <!-- Modern Hamburger Menu Icon -->
+            <div class="navbutton">
+                <button onclick="toggleMenu()">☰</button>
+            </div>
+            </nav>
+
+            <!-- Modern Sliding Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <button class="close-btn" onclick="toggleMenu()">✕</button>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#credentials">Credentials</a></li>
+                    <li><a href="#info">Info</a></li>
+                    <li><a href="#social-media">Social Media</a></li>
+                </ul>
+            </div>
+
         <div class="header-content">
-            <h1>Ahamed Rifayee K.T</h1>
-            <p class="title">Application Developer</p>
+            <h1>Hi, I'm Rifayee! </h1>
+            <p class="title"><span id="typewriter"></span></p>
             <div class="contact-info">
                 <i class="fa-regular fa-envelope"></i><a href="mailto:ahamedrifayeekt@gmail.com" class="email">ahamedrifayeekt@gmail.com</a>
                 <i class="fa-solid fa-phone"></i><a href="tel:+917639584465" class="phone">+91 76395 84465</a>
@@ -19,12 +48,12 @@
         </div>
     </header>
 
-    <section class="objective">
+    <section id="home" class="objective">
         <h2>Career Objective</h2>
         <p>A detail-oriented Application Developer with over 2+ years of experience in web applications and Python programming. Adept at utilizing Python frameworks, object-oriented programming, and coding skills to develop innovative and efficient software solutions. Seeking a challenging role to contribute effectively to impactful projects.</p>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <h2>Technical Summary</h2>
         <div class="skills-grid">
             <div class="skill">
@@ -74,7 +103,7 @@
     
     
 
-    <section class="experience">
+    <section id="experience" class="experience">
         <h2>Professional Experience</h2>
         <h3>Application Developer | Zumi Solutions Pvt. Ltd. | Bangalore</h3>
         <p><strong>September 2021 – February 2024</strong></p>
@@ -100,33 +129,82 @@
             </div>
             <div class="project">
                 <h4>Speedometer Cluster</h4>
-                <p>Created an Android application with a speedometer, call logs, navigation, and music player functionality using Java in Android Studio.</p>
+                <p class="description">Created an Android application with a speedometer, call logs, navigation, and music player functionality using Java in Android Studio.</p>
+                <ul class="responsibilities">
+                    <li><span class="icon">&#10004;</span>Implemented a speedometer using Java in Android Studio.</li>
+                    <li><span class="icon">&#10004;</span>Designed and developed icons for maps, contacts, music, and speedometer screens</li>
+                    <li><span class="icon">&#10004;</span>Created user-friendly interfaces with navigation, recent call logs, and music player functionality.</li>
+                    <li><span class="icon">&#10004;</span>Integrated real-time speed data display on the speedometer screen.</li>
+                </ul>
             </div>
             <div class="project">
                 <h4>Z-PAL Device</h4>
-                <p>Developed a React Native app to monitor environmental metrics like humidity, pressure, air quality, and gas resistance.</p>
+                <p class="description">Developed a React Native app to monitor environmental metrics like humidity, pressure, air quality, and gas resistance.</p>
+                <ul class="responsibilities">
+                    <li><span class="icon">&#10004;</span>Designed and implemented a user-friendly interface using React Native.</li>
+                    <li><span class="icon">&#10004;</span>Developed functionality to retrieve data from hardware boards and display it on the app</li>
+                    
+                </ul>
             </div>
             <div class="project">
                 <h4>Automation Login</h4>
-                <p>Automated the Yahoo Mail login process using Python and Selenium.</p>
+                <p class="description">Automated the Yahoo Mail login process using Python and Selenium.</p>
+
+                <ul class="responsibilities">
+                    <li><span class="icon">&#10004;</span>Wrote Python scripts to automate the login process using Selenium.</li>
+                    <li><span class="icon">&#10004;</span>Implemented features to manage and send messages to multiple email accounts seamlessly.</li>
+                    
+                </ul>
             </div>
+
+
             <div class="project">
                 <h4>Weather Application</h4>
-                <p>Built a weather app using HTML, CSS, JavaScript, and OpenWeatherMap API for real-time weather updates.</p>
+                <p class="description">Built a weather app using HTML, CSS, JavaScript, and OpenWeatherMap API for real-time weather updates.</p>
+
+                <ul class="responsibilities">
+                    <li><span class="icon">&#10004;</span>Created a responsive front-end using HTML, CSS, and JavaScript.<li>
+                    <li><span class="icon">&#10004;</span>Integrated OpenWeatherMap API for real-time weather updates.</li>
+                    <li><span class="icon">&#10004;</span>Designed dynamic UI components to display current weather details.</li>
+                    
+                </ul>
             </div>
         </div>
     </section>
 
-    <section class="education">
+    <section id="credentials" class="education">
         <h2>Academic Credentials</h2>
         <ul>
-            <li>B.E. Computer Science Engineering (2019) - 70%</li>
-            <li>HSC, Muhyiddeen Matriculation Higher Secondary School, Kayalpattinam, Tamil Nadu (2015) – 70%</li>
-            <li>SSLC, Muhyiddeen Matriculation Higher Secondary School, Kayalpattinam, Tamil Nadu (2013) – 90%</li>
+            <li>B.E. Computer Science Engineering (2019) - <span class="progress-text">70%</span>
+                <div class="circle">
+                    <svg class="circle-svg" width="100" height="100">
+                        <circle class="circle-bg" cx="50" cy="50" r="45" />
+                        <circle class="circle-fg" cx="50" cy="50" r="45" />
+                    </svg>
+                </div>
+            </li>
+            <li>HSC, Muhyiddeen Matriculation Higher Secondary School, Kayalpattinam, Tamil Nadu (2015) – <span class="progress-text">70%</span>
+                <div class="circle">
+                    <svg class="circle-svg" width="100" height="100">
+                        <circle class="circle-bg" cx="50" cy="50" r="45" />
+                        <circle class="circle-fg" cx="50" cy="50" r="45" />
+                    </svg>
+                </div>
+            </li>
+            <li>SSLC, Muhyiddeen Matriculation Higher Secondary School, Kayalpattinam, Tamil Nadu (2013) – <span class="progress-text">90%</span>
+                <div class="circle">
+                    <svg class="circle-svg" width="100" height="100">
+                        <circle class="circle-bg" cx="50" cy="50" r="45" />
+                        <circle class="circle-fg" cx="50" cy="50" r="45" />
+                    </svg>
+                </div>
+            </li>
         </ul>
     </section>
+    
+    
 
-    <section class="personal-info">
+    <section id="info" class="personal-info">
         <h2>Personal Information</h2>
         <p>Date of Birth: 22-06-1997</p>
         <p>Father’s Name: Karamathulla</p>
@@ -134,13 +212,32 @@
     </section>
 
     <footer>
-        <div class="social-media">
-            <a href="https://www.linkedin.com/in/ahamed-rifayee-1b23462b5" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://web.whatsapp.com/send?text=Check%20out%20my%20portfolio%20https://your-portfolio-link.com" target="_blank" ><i class="fab fa-whatsapp-square"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="/html/assets/Ahamed rifayee_resume.pdf" download><i class="fa-solid fa-download"></i></a>
+        <div id="social-media" class="social-media">
+            <a href="https://www.linkedin.com/in/ahamed-rifayee-1b23462b5" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://web.whatsapp.com/send?text=Check%20out%20my%20portfolio%20at%20https://ahamedrifayee97.github.io/Ahamed-rifayee-portfolio/" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://github.com/ahamedrifayee97" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="javascript:void(0);" onclick="showShareOptions()" title="Share Portfolio" class="share-icon">
+                <i class="fa-solid fa-share-nodes"></i>
+            </a>
+            <a href="/html/assets/Ahamed_rifayee_resume.pdf" download title="Download Resume">
+                <i class="fa-solid fa-download"></i>
+            </a>
         </div>
-        <p>© 2025 Ahamed Rifayee K.T</p>
+       
+        <!-- Share Options Container -->
+        <div id="share-options" class="share-options">
+            <button onclick="copyLink()">📋 Copy Link</button>
+            <a href="https://wa.me/?text=Check%20out%20this%20portfolio:%20https://ahamedrifayee97.github.io/Ahamed-rifayee-portfolio/" target="_blank">WhatsApp</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://ahamedrifayee97.github.io/Ahamed-rifayee-portfolio/" target="_blank">LinkedIn</a>
+        </div>
+        <p>© 2025 Ahamed Rifayee K.T | All Rights Reserved</p>
+
     </footer>
 </body>
 </html>
@@ -153,16 +250,42 @@
     }
 };
 
-function shareResume() {
-    navigator.share({
-        title: 'Ahamed Rifayee K.T Resume',
-        text: 'Here is my resume!',
-        url: window.location.href
-    }).then(() => {
-        alert('Thanks for sharing!');
-    }).catch((error) => {
-        console.error('Error sharing: ', error);
+
+function showShareOptions() {
+    document.getElementById("share-options").style.display = "block";
+}
+
+function copyLink() {
+    const shareUrl = "https://ahamedrifayee97.github.io/Ahamed-rifayee-portfolio/";
+    navigator.clipboard.writeText(shareUrl).then(() => {
+        alert("Link copied to clipboard!");
+    }).catch(() => {
+        alert("Failed to copy the link.");
     });
 }
+
+function toggleMenu() {
+        const sidebar = document.getElementById('sidebar');
+        const sidebarVisible = sidebar.style.left === '0px';
+        
+        // Toggle Sidebar Slide
+        sidebar.style.left = sidebarVisible ? '-260px' : '0px';
+    }
+    
+
+    const text = "Python Developer";
+    let index = 0;
+    const speed = 100; // Typing speed in ms
+
+function typeWriterEffect() {
+    const typewriter = document.getElementById("typewriter");
+    if (index < text.length) {
+        typewriter.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriterEffect, speed);
+    }
+}
+
+window.onload = typeWriterEffect;
 
 </script>
