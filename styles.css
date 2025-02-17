@@ -5,6 +5,21 @@
     box-sizing: border-box;
 }
 
+.profile-image {
+    width: 140px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.profile-image:hover {
+    transform: scale(1.1) rotateY(10deg) rotateX(10deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Header Styling */
 header {
     background: linear-gradient(135deg, #222629,#474b4F, #222629,#16191b);
